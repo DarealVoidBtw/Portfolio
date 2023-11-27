@@ -19,7 +19,7 @@ const typed = new Typed('.multiple' , {
 
   
 
-/*function getRandomColor() {
+function getRandomColor() {
     const r = Math.floor(Math.random() * 256);
     const g = Math.floor(Math.random() * 256);
     const b = Math.floor(Math.random() * 256);
@@ -49,4 +49,4 @@ function changeRandomShadow() {
 }
 
 // Call the changeRandomShadow function every 2000 milliseconds (2 seconds)
-setInterval(changeRandomShadow, 3000); */
+setInterval(changeRandomShadow, 3000);

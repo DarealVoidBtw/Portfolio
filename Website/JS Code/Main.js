@@ -65,6 +65,10 @@ GetWeather.addEventListener('click', function() {
             }
             InputUI.style.display = "none";
             WeatherWidget.style.display = "block";
+        } else if (data.current.condition.text == "Partly cloudy") {
+            WeatherImage.src = "../Portfolio/Website/Images/Weather/Cloudy With sunny spells.jpg";
+            Card4.style.display = "inline-block";
+            Card4.style.padding = "0px";
         }
     })
     .catch(error => {

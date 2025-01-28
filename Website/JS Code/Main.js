@@ -55,22 +55,22 @@ GetWeather.addEventListener('click', function() {
             Temperature.textContent = data.current.temp_c;
             Condition.textContent = data.current.condition.text;
             if (data.current.condition.text == "Cloudy") {
-                WeatherImage.src = "../Website/Images/Weather/Cloudy With sunny spells.jpg";
+                WeatherImage.src = "../Website/Weather/Cloudy With sunny spells.jpg";
                 WeatherImage.style.display = "block";
                 Card4.style.display = "inline-block";
                 Card4.style.padding = "0px";
             } else if (data.current.condition.text == "Mist") {
-               WeatherImage.src = "../Website/Images/Weather/Drizzle-Mist.jpg";
+               WeatherImage.src = "../Website/Weather/Drizzle-Mist.jpg";
                WeatherImage.style.display = "block";
                Card4.style.display = "inline-block";
                Card4.style.padding = "0px";
             } else if (data.current.condition.text == "Patchy rain nearby") {
-                WeatherImage.src = "../Website/Images/Weather/Drizzle-Mist.jpg"
+                WeatherImage.src = "../Website/Weather/Drizzle-Mist.jpg"
                 WeatherImage.style.display = "block";
                 Card4.style.display = "inline-block";
                 Card4.style.padding = "0px";
             } else if (data.current.condition.text == "Partly cloudy") {
-                WeatherImage.src = "../Website/Images/Weather/Cloudy With sunny spells.jpg";
+                WeatherImage.src = "../Website/Weather/Cloudy With sunny spells.jpg";
                 WeatherImage.style.display = "block";
                 Card4.style.display = "inline-block";
                 Card4.style.padding = "0px";

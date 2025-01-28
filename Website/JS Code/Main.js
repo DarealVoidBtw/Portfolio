@@ -1,12 +1,15 @@
 
 
 const typed = new Typed('.multiple' , {
-    strings: ['Game Developer','Student','Programmer'],
+    strings: ['Game Developer','Student','Programmer', "Ai Engineer"],
     typeSpeed:100,
     backSpeed:100,
     backDelay:1000,
     loop: true
 });
+
+
+
 
 /* Weather Widget Script */
 
@@ -25,6 +28,7 @@ const WeatherImage = document.getElementById("weather-condition");
 const Card4 = document.getElementById("card-4")
 
 WeatherWidget.style.display = "none";
+WeatherImage.style.display = "none";
 WeatherImage.src = "";
 Card4.style.display = "flexbox";
 Card4.style.padding = "32px";
@@ -51,24 +55,28 @@ GetWeather.addEventListener('click', function() {
             Temperature.textContent = data.current.temp_c;
             Condition.textContent = data.current.condition.text;
             if (data.current.condition.text == "Cloudy") {
-                WeatherImage.src = "../Portfolio/Website/Images/Weather/Cloudy With sunny spells.jpg";
+                WeatherImage.src = "../Website/Images/Weather/Cloudy With sunny spells.jpg";
+                WeatherImage.style.display = "block";
                 Card4.style.display = "inline-block";
                 Card4.style.padding = "0px";
             } else if (data.current.condition.text == "Mist") {
-               WeatherImage.src = "../Portfolio/Website/Images/Weather/Drizzle-Mist.jpg";
+               WeatherImage.src = "../Website/Images/Weather/Drizzle-Mist.jpg";
+               WeatherImage.style.display = "block";
                Card4.style.display = "inline-block";
                Card4.style.padding = "0px";
             } else if (data.current.condition.text == "Patchy rain nearby") {
-                WeatherImage.src = "../Portfolio/Website/Images/Weather/Drizzle-Mist.jpg"
+                WeatherImage.src = "../Website/Images/Weather/Drizzle-Mist.jpg"
+                WeatherImage.style.display = "block";
+                Card4.style.display = "inline-block";
+                Card4.style.padding = "0px";
+            } else if (data.current.condition.text == "Partly cloudy") {
+                WeatherImage.src = "../Website/Images/Weather/Cloudy With sunny spells.jpg";
+                WeatherImage.style.display = "block";
                 Card4.style.display = "inline-block";
                 Card4.style.padding = "0px";
             }
             InputUI.style.display = "none";
             WeatherWidget.style.display = "block";
-        } else if (data.current.condition.text == "Partly cloudy") {
-            WeatherImage.src = "../Portfolio/Website/Images/Weather/Cloudy With sunny spells.jpg";
-            Card4.style.display = "inline-block";
-            Card4.style.padding = "0px";
         }
     })
     .catch(error => {
@@ -79,8 +87,9 @@ GetWeather.addEventListener('click', function() {
 BackBtn.addEventListener("click", function() {
     WeatherWidget.style.display = "none";
     InputUI.style.display = "block";
+    WeatherImage.style.display = "none";
     WeatherImage.src = "";
-    Card4.style.display = "flexbox";
+    Card4.style.display = "block";
     Card4.style.padding = "32px";
 });
 

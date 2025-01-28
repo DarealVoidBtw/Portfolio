@@ -79,6 +79,11 @@ GetWeather.addEventListener('click', function() {
                 WeatherImage.style.display = "block";
                 Card4.style.display = "inline-block";
                 Card4.style.padding = "0px";
+            } else if (data.current.condition.text == "Light rain") {
+                WeatherImage.src = "../Website/Images/Weather/Drizzle-Mist.jpg";
+                WeatherImage.style.display = "block";
+                Card4.style.display = "inline-block";
+                Card4.style.padding = "0px";
             }
             InputUI.style.display = "none";
             WeatherWidget.style.display = "block";
